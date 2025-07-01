@@ -6,7 +6,7 @@ let isValid = require("./auth_users.js").isValid;
 let users = require("./auth_users.js").users;
 const public_users = express.Router();
 /*
-// Task 13 - Async/Await version of getting books by title (Task 4)
+// Async/Await version of getting books by title (Task 4)
 public_users.get('/async-get-books-title/:title', async (req, res) => {
   const title = req.params.title;
   try {
@@ -18,7 +18,7 @@ public_users.get('/async-get-books-title/:title', async (req, res) => {
 });
 
 
-// Task 12 - Async/Await version of getting books by author (Task 3)
+// Async/Await version of getting books by author (Task 3)
 public_users.get('/async-get-books-author/:author', async (req, res) => {
   const author = req.params.author;
   try {
@@ -29,7 +29,7 @@ public_users.get('/async-get-books-author/:author', async (req, res) => {
   }
 });
 
-// Task 11 - Async/Await version of getting book by ISBN (Task 2)
+// Async/Await version of getting book by ISBN (Task 2)
 public_users.get('/async-get-book-isbn/:isbn', async (req, res) => {
   const isbn = req.params.isbn;
   try {
