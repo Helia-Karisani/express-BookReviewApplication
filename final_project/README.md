@@ -31,7 +31,7 @@ final_project/
 * ✅ User login with JWT session handling
 * ✅ Add or modify a book review
 * ✅ Delete your own review
-* ✅ Use of Promises and Async/Await with Axios (Tasks 10-13)
+* ✅ Use of Promises and Async/Await with Axios (Tasks 10-13, however, they are commented)
 
 ---
 
