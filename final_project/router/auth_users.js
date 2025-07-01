@@ -45,10 +45,8 @@ regd_users.post("/login", (req,res) => {
 
 // Add a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {
-    const isbn = req.params.isbn;
+  const isbn = req.params.isbn;
   const review = req.query.review;
-
-  // Assuming your JWT middleware already set req.user.username
   const username = req.user.username;
 
   if (!review) {
@@ -59,16 +57,34 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
     return res.status(404).json({ message: "Book not found." });
   }
 
-  // If no reviews object exists, create one
+  // ✅ Correct: Make sure reviews is an object
   if (!books[isbn].reviews) {
     books[isbn].reviews = {};
   }
 
-  // Add or update the review for this user
-  books[isbn].reviews[username] = review;
+  books[isbn].reviews[username] = review;  // ✅ Correct way to store per-user reviews
 
   return res.status(200).json({ message: "Review added/modified successfully." });
 });
+
+regd_users.delete("/auth/review/:isbn", (req, res) => {
+  const isbn = req.params.isbn;
+  const username = req.user.username;  // Username from session / JWT
+
+  // Check if book exists
+  if (!books[isbn]) {
+    return res.status(404).json({ message: "Book not found." });
+  }
+
+  // Check if the user has a review for this book
+  if (books[isbn].reviews && books[isbn].reviews[username]) {
+    delete books[isbn].reviews[username];
+    return res.status(200).json({ message: "Your review deleted successfully." });
+  } else {
+    return res.status(404).json({ message: "You have no review for this book to delete." });
+  }
+});
+
 
 module.exports.authenticated = regd_users;
 module.exports.isValid = isValid;
