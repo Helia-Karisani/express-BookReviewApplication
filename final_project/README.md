@@ -1,13 +1,13 @@
 
 
-# 📚 Express Book Review Application
+# Express Book Review Application
 
 This is a simple Node.js Express project for managing a book review application.
 It allows users to browse books, register, log in, post reviews, and manage their own reviews.
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 final_project/
@@ -23,19 +23,19 @@ final_project/
 
 ---
 
-## 🚀 Features
+## Features
 
-* ✅ View all books
-* ✅ Get book details by ISBN, author, or title
-* ✅ User registration
-* ✅ User login with JWT session handling
-* ✅ Add or modify a book review
-* ✅ Delete your own review
-* ✅ Use of Promises and Async/Await with Axios (Tasks 10-13, however, they are commented)
+* View all books
+* Get book details by ISBN, author, or title
+* User registration
+* User login with JWT session handling
+* Add or modify a book review
+* Delete your own review
+* Use of Promises and Async/Await with Axios (Tasks 10-13, however, they are commented)
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * Node.js
 * Express.js
@@ -45,7 +45,7 @@ final_project/
 
 ---
 
-## ✅ Running the Project Locally
+## Running the Project Locally
 
 1. Clone the repository:
 
@@ -73,7 +73,7 @@ npm start
 
 ---
 
-## ✅ API Endpoints
+## API Endpoints
 
 | **Endpoint**                  | **Method** | **Description**                 |
 | ----------------------------- | ---------- | ------------------------------- |
@@ -90,6 +90,6 @@ npm start
 
 ---
 
-## ✅ Notes
+## Notes
 
 This project was created as part of the Express Backend Development Practice for Book Review Applications.
